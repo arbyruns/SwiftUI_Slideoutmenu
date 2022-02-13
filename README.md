@@ -139,11 +139,11 @@ To increase or decrease edge detection update `if gesture.startLocation.x < CGFl
 
 ## Presenting Sheets
 
-I placed sheets within  `SlideOutMenuView.swift` and have added one sheet as an example. You could also swap out sheet for a `fullScreenCover`
+The sheets are located inwithin `SlideOutMenuView.swift` and I have added one sheet as an example. You could also swap out a sheet for a `fullScreenCover`.
 
 ## Menu Size
 
-Within in `SlideOutMenuView.swift` update the frame size located at `.frame(width: geo.size.width / 1.75)`.
+Within `SlideOutMenuView.swift` you can update the frame size located at `.frame(width: geo.size.width / 1.75)`.
 
 ## Other Notes
 
