@@ -49,6 +49,10 @@ struct SlideOutMenuView: View {
                         .padding(.leading)
                         .padding(.bottom)
                         Divider()
+                        ForEach(sampleItems, id:\.self) { item in
+                            Text(item)
+                                .padding()
+                        }
                         Spacer()
                         Divider()
                         ForEach(MenuItems){ item in
