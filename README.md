@@ -23,4 +23,9 @@ To increase or decrease edge detection update `if gesture.startLocation.x < CGFl
 
 I placed sheets within  `SlideOutMenuView.swift` and have added one sheet as an example.
 
+## Other Notes
+
+There is a `.disabled` modifier to disable `ContentView` when the menu appears otherwise the user could experience some weird behaviors if `ContentView` is still active. 
+
 Feel free to email me with any questions robert.evansii@gmail.com
+
