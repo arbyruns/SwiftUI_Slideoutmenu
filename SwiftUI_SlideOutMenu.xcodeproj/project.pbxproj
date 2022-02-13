@@ -15,6 +15,7 @@
 		5469D1F427B94A9D00C97860 /* MenuItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5469D1F327B94A9D00C97860 /* MenuItemModel.swift */; };
 		5469D1F627B94AA500C97860 /* SlideOutMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5469D1F527B94AA500C97860 /* SlideOutMenuView.swift */; };
 		5469D1FA27B94B8200C97860 /* 3dModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5469D1F927B94B8200C97860 /* 3dModifiers.swift */; };
+		5469D1FE27B94F8700C97860 /* SheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5469D1FD27B94F8700C97860 /* SheetView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		5469D1F327B94A9D00C97860 /* MenuItemModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemModel.swift; sourceTree = "<group>"; };
 		5469D1F527B94AA500C97860 /* SlideOutMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideOutMenuView.swift; sourceTree = "<group>"; };
 		5469D1F927B94B8200C97860 /* 3dModifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 3dModifiers.swift; sourceTree = "<group>"; };
+		5469D1FD27B94F8700C97860 /* SheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			children = (
 				5469D1F927B94B8200C97860 /* 3dModifiers.swift */,
 				5469D1F127B94A9400C97860 /* HelperViews.swift */,
+				5469D1FD27B94F8700C97860 /* SheetView.swift */,
 			);
 			path = HelperViews;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5469D1F227B94A9400C97860 /* HelperViews.swift in Sources */,
+				5469D1FE27B94F8700C97860 /* SheetView.swift in Sources */,
 				5469D1FA27B94B8200C97860 /* 3dModifiers.swift in Sources */,
 				5469D1E627B94A4F00C97860 /* ContentView.swift in Sources */,
 				5469D1E427B94A4F00C97860 /* SwiftUI_SlideOutMenuApp.swift in Sources */,

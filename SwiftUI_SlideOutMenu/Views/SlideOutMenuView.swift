@@ -9,9 +9,7 @@ import SwiftUI
 
 struct SlideOutMenuView: View {
     @State var hideMenuRotate = true
-    @State var showTipJar = false
-    @State var showContact = false
-    @State var showSettings = false
+    @State var showSheet = false
     @State var offset = CGSize.zero
     @State var selectedView = 0
     @Binding var showMenu: Bool
@@ -40,11 +38,11 @@ struct SlideOutMenuView: View {
                                 }
                         }
                         HStack {
-                            Image(systemName: "bell")
+                            Image(systemName: "cpu.fill")
                                 .resizable()
                                 .frame(width: 35, height: 35, alignment: .center)
                                 .clipShape(RoundedRectangle(cornerRadius: 13))
-                            Text("MilHub")
+                            Text("Menu")
                                 .font(.title)
                                 .bold()
                         }
@@ -59,17 +57,18 @@ struct SlideOutMenuView: View {
                                 .onTapGesture {
                                     switch item.id {
                                     case 0:
-                                        showTipJar = true
-                                    case 1:
-                                        showMenu = true
+                                        showSheet = true
                                     default:
-                                        showSettings = true
+                                        showSheet = true
                                     }
                                 }
                         }
                     }
                 }
                 .frame(width: geo.size.width / 1.75)
+                .sheet(isPresented: $showSheet) {
+                    SheetView()
+                }
             }
             .offset(x: offset.width)
             .opacity(2 - Double(abs(offset.width / 75)))
