@@ -2,9 +2,80 @@
 This is a sample code project for a slideout menu.
 
 
-
 https://user-images.githubusercontent.com/2520545/153758648-fe4a706f-5b96-4c9c-890e-b7dc640a4315.mp4
 
+
+# How to Implement
+
+1. Copy over the Model, Views, & HelperViews files to your project.
+2. Add `SlideOutMenuView(showMenu: $showMenu)` to your mainview within a `ZStack` as an `if` statement. 
+
+Example:
+
+```                 
+if showMenu {
+  SlideOutMenuView(showMenu: $showMenu)
+    .shadow(color: Color("nord2").opacity(0.5), radius: 5, x: 0, y: 0)
+    .transition(.opacity)
+    .animation(.easeInOut, value: showMenu)
+  }
+```
+
+3. Add the `AnimationModifier` and `offset` to your view.
+
+Example: 
+
+```
+VStack {
+  YourView()
+}
+.modifier(AnimationModifier(showMenu: $showMenu, animationAmount: $animationAmount))
+.offset(x: offset.width)
+```
+
+## Getting Started Code
+
+```
+VStack {
+  YourView()
+}
+.modifier(AnimationModifier(showMenu: $showMenu, animationAmount: $animationAmount))
+.onTapGesture {
+    withAnimation {
+        showMenu.toggle()
+    }
+}
+.offset(x: offset.width)
+.disabled(showMenu ? true : false)
+if showMenu {
+    SlideOutMenuView(showMenu: $showMenu)
+        .shadow(color: Color("nord2").opacity(0.5), radius: 5, x: 0, y: 0)
+        .transition(.opacity)
+        .animation(.easeInOut, value: showMenu)
+}
+```
+
+# Updating the Menu
+
+1. Update `MenuItems` with your content
+2. Update the `switch` statement within `SlideOutMenuView.swift`
+
+Example: 
+
+```
+.onTapGesture {
+    switch item.id {
+    case 0:
+        showSomeSheet1 = true
+    case 1:
+        showSomeSheet2 = true
+    default:
+        showSomeSheet3 = true
+    }
+}
+```
+
+3. Add the neccesary sheets needed.  There is a starter sheet located within `SlideOutMenuView.swift`.
 
 # Customizing
 
@@ -21,7 +92,11 @@ To increase or decrease edge detection update `if gesture.startLocation.x < CGFl
 
 ## Presenting Sheets
 
-I placed sheets within  `SlideOutMenuView.swift` and have added one sheet as an example.
+I placed sheets within  `SlideOutMenuView.swift` and have added one sheet as an example. You could also swap out sheet for a `fullScreenCover`
+
+## Menu Size
+
+Within in `SlideOutMenuView.swift` update the frame size located at `.frame(width: geo.size.width / 1.75)`.
 
 ## Other Notes
 
