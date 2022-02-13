@@ -77,6 +77,52 @@ Example:
 
 3. Add the neccesary sheets needed.  There is a starter sheet located within `SlideOutMenuView.swift`.
 
+# Calling the Slideout Menu
+
+You can call the menu by utilzing a `Bool` State, in the code example I used `showMenu` and is triggered by swipping and a `toolbar` button.
+
+## Code Examples
+
+Button: 
+```
+.toolbar {
+    ToolbarItem(placement: .cancellationAction) {
+        Button(action: {
+            withAnimation(.spring()) {
+                showMenu = true
+            }
+        }) {
+            Image(systemName: "gearshape.fill")
+        }
+    }
+}
+```
+
+Swipe Gesture:
+
+```
+.gesture(DragGesture()
+                .onChanged { gesture in
+        // increase startLocation to increase edge detection
+        if gesture.startLocation.x < CGFloat(50.0) {
+            withAnimation {
+                offset = gesture.translation
+            }
+        }
+    }.onEnded{ value in
+        if offset.width > 115 {
+            withAnimation(.spring()) {
+                showMenu = true
+                offset = .zero
+            }
+        } else {
+            withAnimation(.spring()) {
+                offset = .zero
+            }
+        }
+    })
+```    
+
 # Customizing
 
 ## Menu Options
