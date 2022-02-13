@@ -35,6 +35,7 @@ struct ContentView: View {
                     }
                 }
                 .offset(x: offset.width)
+                .disabled(showMenu ? true : false)
                 if showMenu {
                     SlideOutMenuView(showMenu: $showMenu)
                         .shadow(color: Color("nord2").opacity(0.5), radius: 5, x: 0, y: 0)
@@ -45,6 +46,17 @@ struct ContentView: View {
             .navigationTitle("SlideOutMenu")
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarHidden(showMenu ? true : false)
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button(action: {
+                        withAnimation(.spring()) {
+                            showMenu = true
+                        }
+                    }) {
+                        Image(systemName: "gearshape.fill")
+                    }
+                }
+            }
             .gesture(DragGesture()
                         .onChanged { gesture in
                 // increase startLocation to increase edge detection
