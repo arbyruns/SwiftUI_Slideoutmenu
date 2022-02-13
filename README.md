@@ -12,7 +12,7 @@ https://user-images.githubusercontent.com/2520545/153758648-fe4a706f-5b96-4c9c-8
 
 Example:
 
-```                 
+```swift       
 if showMenu {
   SlideOutMenuView(showMenu: $showMenu)
     .shadow(color: Color("nord2").opacity(0.5), radius: 5, x: 0, y: 0)
@@ -25,7 +25,7 @@ if showMenu {
 
 Example: 
 
-```
+```swift
 VStack {
   YourView()
 }
@@ -35,7 +35,7 @@ VStack {
 
 ## Getting Started Code
 
-```
+```swift
 VStack {
   YourView()
 }
@@ -62,7 +62,7 @@ if showMenu {
 
 Example: 
 
-```
+```swift
 .onTapGesture {
     switch item.id {
     case 0:
@@ -84,7 +84,8 @@ You can call the menu by utilzing a `Bool` State, in the code example I used `sh
 ## Code Examples
 
 Button: 
-```
+
+```swift
 .toolbar {
     ToolbarItem(placement: .cancellationAction) {
         Button(action: {
@@ -100,7 +101,7 @@ Button:
 
 Swipe Gesture:
 
-```
+```swift
 .gesture(DragGesture()
                 .onChanged { gesture in
         // increase startLocation to increase edge detection
