@@ -61,10 +61,10 @@
 		5469D1E227B94A4F00C97860 /* SwiftUI_SlideOutMenu */ = {
 			isa = PBXGroup;
 			children = (
+				54E6585427B95C6E00949E89 /* Model */,
 				5469D1FC27B94E3000C97860 /* Views */,
 				5469D1FB27B94E2000C97860 /* HelperViews */,
 				5469D1E327B94A4F00C97860 /* SwiftUI_SlideOutMenuApp.swift */,
-				5469D1F327B94A9D00C97860 /* MenuItemModel.swift */,
 				5469D1E727B94A5100C97860 /* Assets.xcassets */,
 				5469D1E927B94A5100C97860 /* Preview Content */,
 			);
@@ -96,6 +96,14 @@
 				5469D1F527B94AA500C97860 /* SlideOutMenuView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		54E6585427B95C6E00949E89 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5469D1F327B94A9D00C97860 /* MenuItemModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
